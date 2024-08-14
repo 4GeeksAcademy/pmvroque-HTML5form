@@ -4,62 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <title>Give me yo money(Payment Example)</title>
 </head>
 <body>
     <div class="row justify-content-center mt-5">
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-8 offset-md-0">
             <div class="card card-outline-secondary">
                 
                 <!-- Example header -->
-            <div class="card-header">
+               <div class="card-header">
                 <h3 class="mb-0">Payment form example</h3>
-            </div>
+               </div>
 
                 <!-- Example body -->
-                <div class="card-body">
-                    <div id="error-msg" class="alert alert-danger">Some fields are missing</div>
-                    <form  method="post" action="#">
-                      <div class="row mt-4">
-                            <!-- card number -->
-                            <div class="col-sm-5 pb-3">
+                <div class=" card-body">
+                  <!-- Red box -->
+                    <div id="error-msg" class="alert alert-danger">
+                      Some fields are missing
+                    </div>
+                      <form  method="post" action="#">
+                  
+                  <!-- Fill boxes -->
+                   
+                    <div class="row justify-content-evenly">
+                      <!-- card number -->
+                      <div class="col-5 pr-0">
                           <label for="inputCard16" class="form-label" >Card Number</label>
                           <input type="cardNumber" class="form-control" id="inputCard16" placeholder="XXXXXXXXXXXXXXXX">
-                        </div>
-                            <!-- CVC -->
-                            <div class="col-sm-3 pb-3">
+                      </div>
+                      <!-- CVC -->
+                      <div class="col-3 pl-3">
                           <label for="inputCVC" class="form-label">CVC</label>
                           <input type="inputCVC" class="form-control" id="inputCVC">
-                        </div>
-                            <!--Amount  -->
-                        
-                            <div class="col-sm-4 pb-3">
-                            <label for="inputAmount" class="form-label">Amount</label>
-                            <div class="input-group-text w-25 h-10">$</div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                          </div>
-                        </div>
-                        
-                        <!-- First and Last name -->
-                        <div class="d-flex">
-                        <div class="col-sm-6 pb-3">
-                          <label for="exampleFirst">First Name</label> 
-                          <input class="form-control" id="exampleFirst" type="text">
-                        </div>
-                        <div class="col-sm-6 pb-3">
-                          <label for="exampleLast">Last Name</label> 
-                          <input class="form-control" id="exampleLast" type="text">
-                        </div>
                       </div>
-                            <!-- City -->
-                             <div class="d-flex">
-                            <div class="col-sm-6 pb-3">
-                              <label for="exampleCity">City</label> <input class="form-control" id="exampleCity" type="text">
-                            </div>
-                            <div class="col-sm-3 pb-3">
+                      <!--Amount  -->                
+                      <div class="col-4">
+                          <label class="visually-hidden">Amount</label>
+                      <div class="input-group">
+                      <span class="input-group-text">$</span>
+                          <input type="text" class="form-control" placeholder="0.00">
+                      </div>
+                      </div>
+                      <!-- First and Last name -->
+                      <div class="col-md-6 mt-2">
+                          <label for="inputFirstName" class="form-label">First Name</label>
+                          <input type="First name" class="form-control">
+                      </div>
+                      <div class="col-md-6 mt-2">
+                          <label for="inputLastName" class="form-label">Last Name</label>
+                          <input type="Last name" class="form-control">
+                      </div>
+                      <!-- City -->
+                      <div class="col-md-6 mt-2">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <!-- state -->
+                      <div class="col-md-4 mt-2">
                               <label for="exampleSt">State</label> <select class="form-control custom-select" id="exampleSt">
                               <option class="text-white bg-warning">
                                 Pick a state
@@ -218,42 +222,38 @@
                                 Wyoming
                               </option>
                               </select>
-                            </div>
-                         
-                              <!-- Zip -->
-                        <div class="col-md-2">
+                            </div>                         
+                      <!-- Zip -->
+                      <div class="col-md-2 mt-2">
                           <label for="inputZip" class="form-label">Postal Code</label>
                           <input type="text" class="form-control" id="inputZip">
-                        </div>
+                      </div>                     
+                      <!-- Cards -->
+                      <div class="col-md-6 pb-3 mt-4">
+                        <p for="exampleAccount">We accept:</p>
+                      <div class="form-check form-check-inline">                   
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
                       </div>
-                        <!-- Cards -->
-                         <div class="d-flex justify-content-between ">
-                          <div class="row">
-                        <label for="ImputAcceptCard" class="form-label mx-4">We accept:</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
-                          </div>
-                        
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                            <label class="form-check-label" for="inlineRadio3">3</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                            <label class="form-check-label" for="inlineRadio3">4</label>
-                          </div>
-                        </div>
+                      <div class="form-check form-check-inline">
+                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                         <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard"></i></label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                         <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-apple-pay"></i></label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                         <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-paypal"></i></label>
+                      </div>
+                      </div>
                         <!-- Message -->
-                        <div class=" form-floating mx-4 mb-3">
-                            <label for="floatingTextarea2">Message</label>
-                            <textarea class="form-control" placeholder="Add any notes here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        </div>
-                        </div>
+                      <div class="col-md-6 pb-3 mt-4">
+                        <label for="exampleMessage">Message</label> 
+                        <textarea class="form-control" id="complexExampleMessage" rows="3"></textarea> 
+                        <small class="text-muted">Add any notes here.</small>
+                      </div>
                          
                         <!-- Buttons -->
                         <div class="d-flex col-12 justify-content-end">
